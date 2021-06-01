@@ -12,16 +12,22 @@ public class EmployeeWage{
 	
 		int empHrs=0, empWage=0;
 		
-		int empcheck = (int) Math.floor(Math.random()*10)%2;
+		int empcheck = (int) Math.floor(Math.random()*10)%3;
 		
 		if (empcheck == IS_FULL_TIME){
 			System.out.println("Employee is present");
 			empHrs=8;
 		}
+		else if(empcheck == IS_PART_TIME){
+			System.out.println("Employee is part time");
+			empHrs=4;
+		}
 		else{
 			System.out.println("Employee is not present");
 			empHrs=0;
 		}
+		
+		
 		empWage= empHrs * EMP_RATE_PER_HOUR;
 		
 		System.out.println("Emp Wage per day" + empWage);
